@@ -16,9 +16,9 @@ Our comprehensive experiments validate the framework's efficacy. Comparative eva
 ## Installation
 >  Clone the repo
 ```
-git clone https://github.com/
+git clone https://github.com/yongsongH/DASRGAN.git
 # Install dependent packages
-cd SAFMN
+cd DASRGAN
 pip install -r requirements.txt
 # Install BasicSR
 python setup.py develop
