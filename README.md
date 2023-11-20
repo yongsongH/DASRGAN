@@ -16,10 +16,16 @@ Recent efforts have explored leveraging visible light images to enrich texture d
 >  Clone the repo
 ```
 git clone https://github.com/yongsongH/DASRGAN.git
-# Install dependent packages
+```
+> Install dependent packages
+```
 cd DASRGAN
+```
+```
 pip install -r requirements.txt
-# Install BasicSR
+```
+> Install BasicSR
+```
 python setup.py develop
 ```
 You can also refer to this [INSTALL.md](https://github.com/XPixelGroup/BasicSR/blob/master/docs/INSTALL.md) for installation
