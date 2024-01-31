@@ -12,6 +12,9 @@ Recent efforts have explored leveraging visible light images to enrich texture d
 > - BasicSR 1.4.2
 > - Platforms: Ubuntu 18.04, cuda-11
 
+***You can also refer to this [Log](results/0131_DASRGAN_M3FD_x2_GitHub/test_0131_DASRGAN_M3FD_x2_GitHub_20240131_185144.log) for more info.***
+
+
 ## Installation
 >  Clone the repo
 ```
