@@ -31,4 +31,4 @@ pip install -r requirements.txt
 ```
 python setup.py develop
 ```
-You can also refer to this [INSTALL.md](https://github.com/XPixelGroup/BasicSR/blob/master/docs/INSTALL.md) for installation
+***You can also refer to this [INSTALL.md](https://github.com/XPixelGroup/BasicSR/blob/master/docs/INSTALL.md) for installation***
