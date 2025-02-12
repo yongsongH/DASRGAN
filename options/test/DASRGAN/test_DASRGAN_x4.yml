@@ -1,0 +1,95 @@
+name: 0131_DASRGAN_M3FD_x4_GitHub 
+model_type: SRModel
+scale: 4
+num_gpu:  1 # set num_gpu: 0 for cpu mode
+manual_seed: 10
+
+# dataset and data loader settings
+datasets:
+  test_1:  # the 1st test dataset
+    name: M3FD_Fusion_test15
+    type: PairedImageDataset
+    dataroot_gt: /home/usrs/hys/0010_Dataset/M3FD_Fusion_SR/M3FD_Fusion_test15/lr/HR
+    dataroot_lq: /home/usrs/hys/0010_Dataset/M3FD_Fusion_SR/M3FD_Fusion_test15/lr/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+  test_2:  
+    name: M3FD_Fusion_test20
+    type: PairedImageDataset
+    dataroot_gt: /home/usrs/hys/0010_Dataset/M3FD_Fusion_SR/M3FD_Fusion_test20/lr/HR
+    dataroot_lq: /home/usrs/hys/0010_Dataset/M3FD_Fusion_SR/M3FD_Fusion_test20/lr/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+  test_3:  
+    name: M3FD_Fusion_test5
+    type: PairedImageDataset
+    dataroot_gt: /home/usrs/hys/0010_Dataset/M3FD_Fusion_SR/M3FD_Fusion_test5/lr/HR
+    dataroot_lq: /home/usrs/hys/0010_Dataset/M3FD_Fusion_SR/M3FD_Fusion_test5/lr/LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+  # test_4:  
+  #   name: resultsA
+  #   type: PairedImageDataset
+  #   dataroot_gt: /home/usrs/hys/0010_Dataset/resultsA/HR
+  #   dataroot_lq: /home/usrs/hys/0010_Dataset/resultsA/LR_bicubic/X2
+  #   filename_tmpl: '{}x2'
+  #   io_backend:
+  #     type: disk
+
+# network structures
+network_g:
+  type: RRDBNet
+  num_in_ch: 3
+  num_out_ch: 3
+  num_feat: 64
+  num_block: 23
+  num_grow_ch: 32
+
+# path
+path:
+  pretrain_network_g: /home/usrs/hys/ShuffleMixer/experiments/1-AAA_final_model/x4_net_g_8.pth 
+  strict_load_g: true
+  resume_state: ~
+
+
+# validation settings
+val:
+  save_img: True
+  suffix: ~
+
+  metrics:
+    irpsnr: # metric name, can be arbitrary
+      type: calculate_irpsnr
+      crop_border: 4
+      test_y_channel: true
+
+    irmse: # metric name, can be arbitrary
+      type: calculate_irmse
+      crop_border: 4
+      test_y_channel: true
+
+    newmse: # metric name, can be arbitrary
+      type: calculate_newmse
+      crop_border: 4
+      test_y_channel: true
+
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true
+
+    niqe:
+      type: calculate_niqe
+      crop_border: 4
+      better: lower  # the lower, the better
+
+    # fid:
+    #   type: calculate_fid
+    #   crop_border: 4
+    #   better: lower  # the lower, the better
+
+
+
