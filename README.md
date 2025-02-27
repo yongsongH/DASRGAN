@@ -39,4 +39,4 @@ Please check this [page](https://doi.org/10.6084/m9.figshare.28388330.v1).
 
 ## Model
 
-Will be released after authorization.
+Pre-trained models and algorithms are subject to software copyright protection.
