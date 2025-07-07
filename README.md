@@ -1,6 +1,7 @@
-# [DASRGAN](https://arxiv.org/abs/2311.08816)
+# [DASRGAN](https://doi.org/10.1016/j.patcog.2025.111449)
 Official PyTorch implementation of the paper Texture and Noise Dual Adaptation for Infrared Image Super-Resolution.
 
+#### 🚩Accepted by Pattern Recognition 💡 If you found this helpful, please consider [citing our work](#citation)! Thank you!
 
 ## Introduction
 
@@ -40,3 +41,20 @@ Please check this [page](https://doi.org/10.6084/m9.figshare.28388330.v1).
 ## Model
 
 Pre-trained models and algorithms are subject to software copyright protection.
+
+
+<a id="citation"></a>
+## Citation
+
+```
+@article{huang2025texture,
+  title={Texture and noise dual adaptation for infrared image super-resolution},
+  author={Huang, Yongsong and Miyazaki, Tomo and Liu, Xiaofeng and Dong, Yafei and Omachi, Shinichiro},
+  journal={Pattern Recognition},
+  volume={163},
+  pages={111449},
+  year={2025},
+  publisher={Elsevier}
+}
+
+```
