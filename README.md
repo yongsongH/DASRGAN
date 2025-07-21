@@ -40,7 +40,7 @@ Please check this [page](https://doi.org/10.6084/m9.figshare.28388330.v1).
 
 ## Model
 
-Pre-trained models and algorithms are subject to software copyright protection.
+A software copyright application for this work is in progress. Access to the pre-trained models and core code is restricted as they are protected intellectual property. I appreciate your understanding.
 
 
 <a id="citation"></a>
